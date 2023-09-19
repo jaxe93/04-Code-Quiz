@@ -76,7 +76,7 @@ function buildHighScoreBoard() {
     cleardivs()
     var top3 = getTop3()
     var html = `
-    <table>
+    <table id="highscore">
         <tr>
             <th>Name</th>
             <th>score</th>
@@ -85,9 +85,9 @@ function buildHighScoreBoard() {
         `
     for (var i= 0; i<3; i++) {
         html += `<tr>
-        <td>${top3[i].name}</td>
-        <td>${top3[i].score}</td>
-        <td>${i + 1}</td>
+        <td class="top3">${top3[i].name}</td>
+        <td class="top3">${top3[i].score}</td>
+        <td class="top3">${i + 1}</td>
         </tr>`
     }
     html += "</table>"

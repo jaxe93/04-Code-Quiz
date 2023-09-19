@@ -6,25 +6,27 @@
 }
 
 body {
-    background-color: darkslateblue;
+    background-color: #373038;
 }
 
 
 #title {
     text-align: center;
-    color:darkred;
+    color:#88E032;
     font-size: 80px;
 }
 
 
 
 #quiz,  #highscore{
-    background: #CBC9BC;
+    background: #862FE0;
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
     border-radius: 10px;
     padding: 30px;
+    border-style: outset;
+    border-color: #373038;
 }
 
 
@@ -35,25 +37,49 @@ body {
 
 #highscoretitle {
     text-align: center;
-    color:darkred;
+    color:#88E032;
     font-size: 60px;
 }
 
 .button {
 
-    color:crimson;
-    background-color: cadetblue;
+    color: #FFC341;
+    background-color: #FB702D;
     padding: 10px;
     font-size: 20px;
     margin: 15px 15px 15px 15px;
+    border-style: outset;
+    border-color: #FFC341;
 }
 
 .start {
     font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:crimson;
-    background-color: darkgoldenrod;
+    color:#FFC341;
+    background-color: #FB702D;
 padding: 10px;
 margin: 15px 15px 15px 15px;
+border-style: outset;
+    border-color: #FFC341;
 }
 
+.top3 {
+    font-size: 20px;
+    color: antiquewhite;
+    padding: 5px;
+    margin: auto;
+    border-style: outset;
+    border-color: #373038;
+}
+
+#highscore {
+    font-size: 20px;
+    color: antiquewhite;
+    padding: 5px;
+    align-items: left;
+    }
+
+
+    
+
+    
