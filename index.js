@@ -9,7 +9,7 @@ var highscores= [
 ]
 var gamestate= {}
      
-
+//questions and options
 
 var questions= [
     {question: "0+1", answer: "1", options: ["3", "4", "2", "1"]},
@@ -18,6 +18,8 @@ var questions= [
     {question: "0+4", answer: "4", options: ["3", "4", "2", "1"]},
     {question: "0+5", answer: "5", options: ["3", "4", "5", "1"]},
 ]
+
+//timer built out
 
 function tic() {
     document.getElementById("timer").innerHTML = gamestate.time
@@ -67,6 +69,8 @@ function cleardivs() {
     clearTimer()
 
 }
+
+//build high score board
 
 function buildHighScoreBoard() {
     cleardivs()
@@ -119,6 +123,7 @@ function start() {
 
 }
 function checkAnswer(guess, answer) {
+    console.log(guess, " ", answer)
     if(answer === guess){
         gamestate.question++
         if(gamestate.question < questions.length){ 
@@ -146,13 +151,15 @@ function askQuestion() {
     var o= questions[gamestate.question].options
     var html= `<ul>`
     for (var i=0; i < o.length; i++){
+        console.log(o[i])
         html += `
             <li>
-                <button onClick="checkAnswer(${o[i]}, ${a})">${o[i]}</button>
+                <button onClick='checkAnswer(${o[i]}, ${a})'>${o[i]}</button>
             </li>
         `
-    }
 
+    }
+    html +=  `</ul>`
     document.getElementById("question").innerHTML = q
     document.getElementById("answers").innerHTML = html
     
