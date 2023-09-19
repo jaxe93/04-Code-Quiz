@@ -39,3 +39,21 @@ body {
     font-size: 60px;
 }
 
+.button {
+
+    color:crimson;
+    background-color: cadetblue;
+    padding: 10px;
+    font-size: 20px;
+    margin: 15px 15px 15px 15px;
+}
+
+.start {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:crimson;
+    background-color: darkgoldenrod;
+padding: 10px;
+margin: 15px 15px 15px 15px;
+}
+

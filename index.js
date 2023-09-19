@@ -12,11 +12,11 @@ var gamestate= {}
 //questions and options
 
 var questions= [
-    {question: "0+1", answer: "1", options: ["3", "4", "2", "1"]},
-    {question: "0+2", answer: "2", options: ["3", "4", "2", "1"]},
-    {question: "0+3", answer: "3", options: ["3", "4", "2", "1"]},
-    {question: "0+4", answer: "4", options: ["3", "4", "2", "1"]},
-    {question: "0+5", answer: "5", options: ["3", "4", "5", "1"]},
+    {question: "inside which HTML element do we put the JavaScript?", answer: "Script", options: ["Javascript", "JS", "Script", "Scripting"]},
+    {question: "What does Nan stand for?", answer: "Not a number", options: ["Not a number", "Not a nation", "Not anywhere near", "Numbers are near"]},
+    {question: "Which is not a variable?", answer: "This", options: ["Var", "Const", "This", "Let"]},
+    {question: "What is a string for?", answer: "Storing and manipulating text", options: ["Writing paragraphs", "Storing and manipulating text", "Styling", "All of the above"]},
+    {question: "Which is not a data type?", answer: "Random", options: ["Null", "String", "Random", "Object"]},
 ]
 
 //timer built out
@@ -92,7 +92,7 @@ function buildHighScoreBoard() {
     }
     html += "</table>"
     var newGameButton= `
-    <button onclick="startButton()">"Would you like to play again"</button>
+    <button class="start" onclick="startButton()">"Would you like to play again?"</button>
     `
     document.getElementById("highscore").innerHTML = html + newGameButton
 
@@ -154,7 +154,7 @@ function askQuestion() {
         console.log(o[i])
         html += `
             <li>
-                <button onClick='checkAnswer(${o[i]}, ${a})'>${o[i]}</button>
+                <button class="button" onClick='checkAnswer("${o[i]}", "${a}")'>${o[i]}</button>
             </li>
         `
 
@@ -174,7 +174,7 @@ function startButton() {
         running: true
     }
     document.getElementById("startpage").innerHTML = `
-    <button onclick="start()">would you like to start?</button>
+    <button class="start" onclick="start()">would you like to start?</button>
     `
 }
 startButton();
